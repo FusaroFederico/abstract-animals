@@ -4,6 +4,7 @@ public abstract class Animale {
 	// instance variables
 	private String name;
 	private String species;
+	private String food;
 	
 	// constructor
 	public Animale(String name, String species) {
@@ -16,8 +17,10 @@ public abstract class Animale {
 		System.out.println(this.name + " sta dormendo, Zzz!");
 	}
 	
-	// whatEat abstract method
-	public abstract String whatEat();
+	// whatEat method
+	public String whatEat() {
+		return this.name + " eat " + this.food;
+	};
 	
 	// makeASound abstract method
 	public abstract String makeASound();
@@ -34,6 +37,12 @@ public abstract class Animale {
 	}
 	public void setSpecies(String species) {
 		this.species = species;
+	}
+	public String getFood() {
+		return food;
+	}
+	public void setFood(String food) {
+		this.food = food;
 	}
 	
 }
