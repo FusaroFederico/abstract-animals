@@ -3,18 +3,36 @@ package org.lessons.java.abstactclass;
 public class Cane extends Animale {
 	// instance variables
 	private String breed;
-	private final String food = "meat";
 	
 	// constructor
-	public Cane(String name, String species, String breed) {
-		super(name, species);
+	public Cane(String name) {
+		super(name);
+		setSpecies("Canis lupus");
+		setFood("carne");
+	}
+	public Cane(String name, String breed) {
+		super(name);
+		setSpecies("Canis lupus");
+		setFood("carne");
+		this.breed = breed;
+	}
+	public Cane(String name, String breed , String food) {
+		super(name);
+		setSpecies("Canis lupus");
+		setFood(food);
 		this.breed = breed;
 	}
 	
 	// Override makeASound method
 	@Override
-	public String makeASound() {
-		return getName() + " says: Woof woof.";
+	public void makeASound() {
+		System.out.println(getName() + " says: Woof woof.");
+	}
+	
+	// Override whatEat method
+	@Override
+	public void whatEat() {
+		System.out.println(getName() + " eat " + getFood());
 	}
 	
 	// Getters and Setters
@@ -25,5 +43,5 @@ public class Cane extends Animale {
 	public void setBreed(String breed) {
 		this.breed = breed;
 	}
-
+	
 }
