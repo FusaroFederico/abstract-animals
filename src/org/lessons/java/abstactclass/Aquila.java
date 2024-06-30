@@ -1,6 +1,6 @@
 package org.lessons.java.abstactclass;
 
-public class Aquila extends Animale {
+public class Aquila extends Animale implements Volante{
 	// instance variables
 	private String habitat;
 	private int age;
@@ -27,6 +27,11 @@ public class Aquila extends Animale {
 	@Override
 	public void makeASound() {
 		System.out.println(getName() + " is screeching.");
+	}
+	
+	@Override
+	public void vola() {
+		System.out.println("Sto volando!!!");
 	}
 	
 	//Getters and Setters

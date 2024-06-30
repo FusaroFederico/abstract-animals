@@ -1,6 +1,6 @@
 package org.lessons.java.abstactclass;
 
-public class Passerotto extends Animale {
+public class Passerotto extends Animale implements Volante{
 	// instance variables
 	private String habitat;
 	
@@ -27,6 +27,12 @@ public class Passerotto extends Animale {
 	public void makeASound() {
 		System.out.println(getName() + " says: Cip cip.");
 	}
+	
+	@Override
+	public void vola() {
+		System.out.println("Sto volando!!!");
+	}
+	
 	// Getters and Setters
 	public String getHabitat() {
 		return habitat;
