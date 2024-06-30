@@ -7,9 +7,8 @@ public abstract class Animale {
 	private String food;
 	
 	// constructor
-	public Animale(String name, String species) {
+	public Animale(String name) {
 		this.name = name;
-		this.species = species;
 	}
 	
 	// goToSleep method
@@ -17,13 +16,11 @@ public abstract class Animale {
 		System.out.println(this.name + " sta dormendo, Zzz!");
 	}
 	
-	// whatEat method
-	public String whatEat() {
-		return this.name + " eat " + this.food;
-	};
+	// whatEat abstract method
+	public abstract void whatEat();
 	
 	// makeASound abstract method
-	public abstract String makeASound();
+	public abstract void makeASound();
 	
 	// Getters and Setters
 	public String getName() {
