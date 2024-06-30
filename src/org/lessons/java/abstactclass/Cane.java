@@ -1,6 +1,6 @@
 package org.lessons.java.abstactclass;
 
-public class Cane extends Animale {
+public class Cane extends Animale implements Nuotante{
 	// instance variables
 	private String breed;
 	
@@ -33,6 +33,11 @@ public class Cane extends Animale {
 	@Override
 	public void whatEat() {
 		System.out.println(getName() + " eat " + getFood());
+	}
+	
+	@Override
+	public void nuota() {
+		System.out.println("Sto nuotando!!!");
 	}
 	
 	// Getters and Setters

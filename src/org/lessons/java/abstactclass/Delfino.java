@@ -1,6 +1,6 @@
 package org.lessons.java.abstactclass;
 
-public class Delfino extends Animale {
+public class Delfino extends Animale implements Nuotante{
 	// instance variables
 	private int age;
 	private boolean hasOffspring;
@@ -28,6 +28,12 @@ public class Delfino extends Animale {
 	public void makeASound() {
 		System.out.println(getName() + " is whistling");
 	}
+	
+	@Override
+	public void nuota() {
+		System.out.println("Sto nuotando!!!");
+	}
+	
 	// Getters and setters
 	public int getAge() {
 		return age;
